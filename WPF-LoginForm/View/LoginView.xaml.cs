@@ -36,5 +36,11 @@ namespace WPF_LoginForm.View
         {
             WindowState=WindowState.Minimized;
         }
+
+        private void btnClose_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+
+        }
     }
 }
