@@ -182,7 +182,7 @@
                             HorizontalAlignment="Center"
                                />
 
-                    <TextBlock Text="Sample Log In"
+                    <TextBlock Text="Sample Log In Template"
                                Foreground="Orange"
                                FontSize="12"
                                FontWeight="Bold"
@@ -211,8 +211,7 @@
                              BorderThickness="0,0,0,2"
                              Height="28"
                              VerticalAlignment="Center"
-                             Margin="0,5,0,0"
-                             >
+                             Margin="0,5,0,0">
                         
                         
                         
@@ -220,6 +219,101 @@
                     </TextBox>
 
 
+                    <TextBlock Text="Password"
+                               Foreground="LightGoldenrodYellow"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               FontFamily="Montserrat"
+                              
+                               Margin="0,15,0,0"
+                               />
+                    <PasswordBox x:Name="txtPass"
+                             FontSize="13"
+                             FontWeight="Medium"
+                             FontFamily="Monstserrat"
+                             Background="Transparent"
+                             Foreground="White"
+                             CaretBrush="LightGray"
+                             BorderBrush="DarkGray"
+                             BorderThickness="0,0,0,2"
+                             Height="28"
+                             VerticalAlignment="Center"
+                             Margin="0,5,0,0">
+
+
+
+
+                    </PasswordBox>
+
+
+                    <Button x:Name="btnLogin"
+                            BorderThickness="0"
+                            Content="Log In"
+                            Foreground="White"
+                            FontSize="16"
+                            FontFamily="Montserrat"
+                            Cursor="Hand"
+                            Grid.Column="2"
+                            Margin="0,50,0,0"
+                            Click="btnLogIn_Click">
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="Background" Value="#462AD8"/>
+                                <Style.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter Property="Background" Value="#700240"/>
+                                    </Trigger>
+                                </Style.Triggers>
+
+
+                            </Style>
+
+                        </Button.Style>
+
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="150" Height="40"
+                                            CornerRadius="20"
+                                            Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                         HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+
+                        </Button.Template>
+
+
+
+
+
+
+
+                    </Button>
+
+                    <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Center"
+                                Margin="0,15,0,0"
+                                >
+
+                    <TextBlock Text="Forgot Password?"
+                               Foreground="LightGoldenrodYellow"
+                               FontSize="12"
+                               FontWeight="Medium"
+                               FontFamily="Montserrat"/>
+
+
+                    <TextBlock Text="Reset"
+                               Foreground="LightGoldenrodYellow"
+                               FontSize="12"
+                               FontWeight="Bold"
+                               Cursor="Hand"
+                               FontFamily="Montserrat"
+                               Margin="10,0,0,0"/>
+
+                    </StackPanel>
+                
+                
                 </StackPanel>
 
 
